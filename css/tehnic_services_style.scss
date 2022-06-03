@@ -1,0 +1,205 @@
+$color9: #7E7E82;
+$color10: #1B1C21;
+$font-family1: 'TT Lakes Regular';
+$font-family2: 'TT Lakes Medium';
+$color11: #DDDDDD;
+$color12: #B5B6BC;
+$color13: #F2F2F2;
+$color14: #ffffff;
+$color15: #EAEAEA;
+
+
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('../fonts/TTLakes-Regular.eot');
+    src: url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/TTLakes-Regular.woff') format('woff'), url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/TTLakes-Medium.woff') format('woff'), url('../fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    &::before {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+.tehnic_services{
+    
+    .container{min-width: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 284px;
+    background: $color13;
+    padding-left: 24px;
+    border-top: 1px solid #D9FFF5;
+}
+   
+
+    .techic-services__title{
+    display: block;
+    font-family: $font-family1;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    padding-top: 15px;
+    color: $color9;
+    height: 56px;
+    margin-bottom: 24px;
+    background: linear-gradient(90deg, rgba(248,248,248,0) 0%, rgba(255,255,255,1))
+    }
+    
+    .swiper-slide {
+        min-width: 0;
+        width: 240px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style-type: none;
+        background: $color14;
+        border: 1px solid $color15;
+        border-radius: 6px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .swiper-slide_text{
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color10;
+    }
+   
+    .swiper-slide__button {
+        width: 40px;
+        height: 40px;
+        background: url(../icons/go.svg) no-repeat;
+        border: none;
+        margin-right: 16px;
+        align-self:flex-end;
+    }
+    .swiper-pagination-bullet {
+        background-color: $color11;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        margin: 16px 12px 0 0;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $color12;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        margin: 0 auto;
+        bottom: -16px;
+    }
+
+    .swiper {
+        width:100%;
+        // height: 500px;
+      }
+
+      .checkbox__input {
+        position: absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .checkbox__label {
+        display: flex;
+        width: 133px;
+        height: 24px;
+        margin-bottom: 16px;
+    }
+
+    .checkbox {
+        margin-top: 24px;
+        display: none;
+        cursor: pointer;
+    }
+
+    .checkbox__image {
+        width: 24px;
+        height: 24px;
+        background: url(../icons/arrow.svg) no-repeat;
+    }
+
+    .checkbox__read {
+        font-family: $font-family2;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        color: $color10;
+    }
+
+    .checkbox__transform {
+        transform: rotate(0.5turn);
+    }
+
+    @media (min-width:768px) {
+        // .container {
+        //     min-height: 322px;
+        // }
+
+        .checkbox {
+            display: block;
+        }
+
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
+            grid-column-gap: 0px;
+            grid-row-gap: 14px;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            width: 224px;
+        }
+    }
+
+    @media (min-width:1120px) {
+        .swiper-wrapper {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .swiper-slide {
+            width: 240px;
+        }
+    }
+}
+  
+

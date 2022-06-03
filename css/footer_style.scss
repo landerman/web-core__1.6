@@ -1,0 +1,99 @@
+$background: #F8F8F8;
+$footer-background: #1B1C21;
+$main-text-color: #1B1C21;
+$menu-text-color: #7E7E82;
+$border-color: #B8FFEC;
+$title-border-color: #41F6D7;
+$blue: #3698FB;
+$gray: #7B8A92;
+$soft-gray: #96A5B1;
+$light-gray: #EAEAEA;
+$smoky-white: #EEEEEE;
+$white: #FFFFFF;
+$pink: #FF3E79;
+$error-red: #ff0000;
+$pagination-active : #B5B6BC;
+$pagination: #DDDDDD;
+
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/TTLakes-Medium.woff') format('woff'), url('../fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    &::before {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+.container{
+    padding: 0 24px 0 24px;
+}
+.footer { 
+    font-family: 'TT Lakes Medium';
+    opacity: 0.72;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid $border-color;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $menu-text-color;
+  
+   
+  
+    &__develop {
+      span {
+        display: block;
+      }
+
+    }
+
+  }
+
+  @media (min-width: 768px) {
+
+    .footer{
+    flex-direction: row;
+    justify-content: space-between;;
+  
+   &__develop{
+  
+    text-align: left;
+  }
+  &__offer {
+      max-width: 215px;
+      text-align: right;
+  }
+
+}
+}
+
+@media (min-width: 1440px) {
+    .footer__offer {
+    max-width: 330px;
+  }
+}

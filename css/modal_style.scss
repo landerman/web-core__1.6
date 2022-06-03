@@ -1,0 +1,246 @@
+$background: #F8F8F8;
+$footer-background: #1B1C21;
+$main-text-color: #1B1C21;
+$menu-text-color: #7E7E82;
+$border-color: #B8FFEC;
+$title-border-color: #41F6D7;
+$blue: #3698FB;
+$gray: #7B8A92;
+$soft-gray: #96A5B1;
+$light-gray: #EAEAEA;
+$smoky-white: #EEEEEE;
+$white: #FFFFFF;
+$pink: #FF3E79;
+$error-red: #ff0000;
+$pagination-active : #B5B6BC;
+$pagination: #DDDDDD;
+
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/TTLakes-Medium.woff') format('woff'), url('../fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: url('TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Bold.woff') format('woff'),
+        url('../fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+    
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    &::before {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+
+    }
+}
+
+.container {
+    padding-left: 16px;
+    background: $background;
+
+}
+
+
+.ucall{
+width: 50px;
+height: 50px;
+position:fixed;
+top: 50px;
+left: 100px;
+background:red;
+
+}
+
+ .ufeedback{
+    width: 50px;
+    height: 50px;
+    position:fixed;
+    top: 200px;
+    left: 100px;
+    background:red;
+    
+    }
+
+.modal{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    border-left: 1px solid #D9FFF5;
+    background-color: $white;
+    visibility: visible;
+    box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2),
+                -2px 0 4px rgba(69, 79, 126, 0.02);
+    z-index: 4;
+    transition: all 1s ease-in-out;
+
+
+ 
+  
+    &--remove {
+      right: -100%;
+      visibility: hidden;
+    }
+
+    &--feedback-remove{
+        .modal__feedback{
+            display: none;
+            transition: all 1s ease-in-out;
+        }
+    }
+
+    &--call-remove{
+        .modal__callback{
+            display: none;
+            transition: all 1s ease-in-out;
+        }
+
+    }
+    &-wrapper {
+      padding: 24px 16px;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+  
+      
+    }
+  
+    &__close-btn {
+      margin-bottom: 40px;
+      width: 40px;
+      height: 40px;
+      background: {
+        image: url("../icons/icon_exit.svg");
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+        color:transparent;
+      } border:none;
+    }
+  
+    &__title {
+      position: relative;
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -.6px;
+  
+      &::before {
+        position: absolute;
+        content: "";
+        top: -8px;
+        left: -16px;
+        height: 39px;
+        border-left: 3px solid #41f6d7;
+        border-radius: 5px;
+      }
+    }
+  
+    &__input {
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      width: 100%;
+      height: 48px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -.2px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      
+  
+      &::placeholder {
+        color: #B5B6BC;
+      }
+    }
+  
+    &__textarea {
+      min-height: 118px;
+    }
+  
+    &__agreement {
+      margin-bottom: 19px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: $menu-text-color;
+  
+      & > a {
+        color: $pink;
+      }
+    }
+  
+    &__submit-btn {
+      display: block;
+      position: relative;
+      margin-left: auto;
+      padding: 4px 35px 4px 8px;
+      width: 136px;
+      height: 32px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: .2px;
+      color: $white;
+      border-radius: 16px;
+      border:none;
+      background:$pink url('../icons/goside.svg') 90% 50% no-repeat;
+    }
+  }
+
+
+  @media (min-width: 1440px) {
+      .modal{
+    top: 0;
+    bottom: 0;
+    width: 440px;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+    &-wrapper{
+        
+            position: absolute;
+            right: 0;
+            left: unset;
+            padding: 40px 32px;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+    }
+    &__close-btn {
+          position: absolute;
+          top: 32px;
+          left: -64px;
+      }
+      &__title::before {
+            left: -32px;
+        }
+      }
+  }
